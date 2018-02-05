@@ -2,29 +2,36 @@ import React from "react";
 
 function Header(){
   let mainHeader = {
+    fontFamily: 'sans-serif',
     display: 'flex',
     width: '100%',
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    borderBottom: 'solid 2px grey'
   }
-  let leftHeader = {
-    display: 'flex',
+
+  let nav = {
     padding: '10px',
     border: 'solid 1px grey'
   }
-  let rightHeader = {
-    display: 'flex',
+
+  let search = {
+    border: 'solid 1px blue',
+    padding: '10px',
+    margin: '10px',
+    width: '300px'
   }
 
   return (
     <div style={mainHeader}>
-      <div style={leftHeader}>
-        <div>Home</div>
-        <div>Notifications</div>
-        <div>Messages</div>
+      <div style={{display: 'flex'}}>
+        <div style={nav}>Home</div>
+        <div style={nav}>Notifications</div>
+        <div style={nav}>Messages</div>
       </div>
-      <div style={rightHeader}>
-        <div>Search</div>
-        <div>Tweet</div>
+      <div style={{display: 'flex'}}>
+        <div style={search}>Search</div>
+        <div style={search}>Tweet</div>
       </div>
     </div>
   );
